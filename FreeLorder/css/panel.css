@@ -1,0 +1,54 @@
+@font-face{
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../webfonts/sofiaExtraLight.otf);  
+}
+@font-face{
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../webfonts/sofiaLight.otf);  
+}
+@font-face{
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../webfonts/sofia.otf);  
+}
+*{font-family: 'Sofia';color: white;-webkit-font-smoothing: antialiased}
+body{margin: 0;}
+header{background: linear-gradient(to bottom, #FF4842,#FF425E);height: 40px;box-shadow: 0 1px 3px #69696959;}
+header #headerWrapper{height: 100%;}
+header #profilePhoto{text-align: center;}
+header #profilePhoto .status{width: 15px;height: 15px;background: green;position: absolute;right: 30px;bottom: -40px;border-radius: 50%;box-shadow:0 1px 2px 2px #00000024}
+header #profileUser{line-height: 40px;text-shadow: 0 0 10px #00000061;padding-left: 0;}
+header #profileUser span{font-size: .7em;margin-left: 10px;text-shadow: 0 0 1px #00000061;font-weight: 200}
+header #profilePhoto img{margin-top: 3px;border-radius: 50%;width: 80px;height: 80px;object-fit: cover;box-shadow: 0 1px 10px #555}
+header #menu{padding: 0}
+header #menu ul{display: flex;height: 100%;padding: 0}
+header #menu ul li{display: flex;flex-grow: 1;height: 100%;font-weight: 100;}
+header #menu ul li a span{margin-left: 10px;}
+header #menu ul li a{text-shadow: 0 0 2px #3a3a3a9c;display: flex;flex-grow: 1;height: 100%; color:white;text-decoration: none;font-size: .9em;position: relative;justify-content: center;align-items: center}
+header #menu ul li a.active::after, header #menu ul li:not(.extraMenu) a:hover:after{position: absolute;left:0;bottom: 0;width: 100%;height: 3px;content: '';background: white}
+header #menu ul li.extraMenu{margin-left: 50px}
+header #menu ul li i{text-shadow: 0 0 1px black}
+main, main .container-fluid, main .row{height: calc(100vh - 40px);}
+main #chat{box-shadow: 1px 1px 8px #00000024;}
+main #chat .chatInputWrapper{position: absolute;bottom: 0;left: 0;width: 100%}
+main #chat .chatInputWrapper button{position: absolute;right: 0; background: linear-gradient(to right, #FF406B,#FF4A2D);border: 0;padding: 5px 20px;height: 100%;cursor: pointer;}
+main #chat input.chatInput{border: 0;width: calc(100% - 55px);box-shadow: 0 -1px 8px #00000024;padding: 7px 15px;color:black;}
+main #chat input.chatInput:focus, main #chat .chatInputWrapper button:focus{outline: none}
+main #chat{padding: 0}
+main #chat ul{padding: 5px 0;width: 100%}
+main #chat ul li{padding: 10px 20px;position: relative;width: 100%;margin-bottom: 20px;}
+main #chat ul li::after{position: absolute;left:0;bottom: -10px;background: #f6f6f6;content: '';width: 100%;height: 1px;}
+main #chat ul li .message{font-size: .8em;margin-left: 65px;word-break: break-word;}
+main #chat ul li .profileInfos{display:inline-block;line-height: 14px;margin-left: 10px;}
+main #chat ul li .profileInfos .timespan{font-size: .7em;font-weight: 200;color: #ccc;}
+main #chat ul li .profileInfos div, main #chat ul li .message{color: black}
+main #chat ul li .chatProfilePhoto{position: relative;display: inline-block}
+main #chat ul li .chatProfilePhoto img{width: 45px;border-radius: 50%;box-shadow:0 1px 2px 2px #00000024}
+main #chat ul li .chatProfilePhoto .status{width: 15px;height: 15px;position: absolute;right: 0;bottom: 0;border-radius: 50%;box-shadow:0 1px 2px 2px #00000024}
+main #chat ul li .chatProfilePhoto .status.online{background: green}
+main #chat ul li .chatProfilePhoto .status.busy{background: #F29200}

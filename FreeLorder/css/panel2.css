@@ -1,0 +1,42 @@
+@font-face{
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../fonts/sofiaLight.otf);  
+}
+@font-face{
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/sofia.otf);  
+}
+html,body{height: 100%;}
+*:not(i){font-family: 'Sofia';-webkit-font-smoothing: antialiased}
+
+
+.sidebar{background: linear-gradient(to top, #141E30, #243B55);padding-top: 10px;color: white}
+.sidebar #profilePhoto{position: relative;}
+.sidebar #profilePhoto .signOut{position: absolute;bottom: -5px;left:0;right: 0;width: fit-content;margin: 0 auto;opacity: 1;font-size: 1.5em;text-shadow: 0 1px 1px #000000a8;cursor: pointer;}
+.sidebar .profilePhoto{width: 80px;height: 80px;margin-bottom: 10px}
+.sidebar p{font-weight: 200;text-shadow: 0 1px 1px #000000a8;font-size: .9em;margin: 0}
+.sidebar p.rank{color: #ffffffd6;text-shadow: 0 1px 3px #000000;font-size: .7em;}
+.sidebar .menu{display: flex;padding: 0;flex-direction: column;margin-top: 40px}
+.sidebar .menu li{display: flex;flex-grow: 1}
+.sidebar .menu li a{display: flex;flex-grow: 1;justify-content: flex-end;align-items: center;color: white;text-decoration: none;padding: 15px 10px;position: relative;text-shadow: 0 1px 1px #000000a8;}
+.sidebar .menu li a::after, .sidebar .menu li a.active:after{position: absolute;left:0;bottom: 0;width: 0;height: 3px;background: white;content: '';box-shadow: 0 1px 1px #00000066;transition: .2s}
+.sidebar .menu li a.active:after{width: 100%}
+.sidebar .menu li a:hover::after{width: 100%}
+.sidebar .menu li a i{position: absolute;left: 0;font-size: 1.5em;}
+
+.main{padding: 0!important}
+.main .searchBox{position: relative;}
+.main .searchBox i{position: absolute;left: 0;font-size: 1.5em;line-height: 45px;margin-left: 10px}
+.main input#searchBox{width: 100%;border: 0;padding: 10px 50px}
+
+.chat .chatInput{position: absolute;left:0;bottom: 0;width: 100%}
+.chat .chatInput #chatInput{width: calc(100% - 60px);border: 0;padding: 8.5px 15px;box-shadow: 0 -1px 1px rgba(0,0,0,.15) !important;}
+.chat .chatInput button{transition: .2s; cursor: pointer;text-shadow: 0 1px 1px #000000a8;width: 60px;border: 0;padding: 7px 15px;background: linear-gradient(to top, #141E30, #243B55);position: absolute; right: 0;bottom: 0;font-size: 1.2em;color: white}
+.chat .chatInput button:hover{text-indent: 5px}
+
+/* FOCUS */
+.main input#searchBox:focus, .chat .chatInput button:focus, .chat .chatInput #chatInput:focus{outline: none}

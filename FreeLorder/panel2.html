@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-lg-2 sidebar h-100 shadow text-center">
+                <div id="profilePhoto">
+                    <img src="img/avatar.jpg" class="profilePhoto rounded-circle shadow">
+                    <div class="signOut tooltip" data-toggle="tooltip" data-placement="bottom" title="Sign Out"><i class="la la-power-off"></i></div>
+                </div>
+                <p class="text-capitalize">Abdulsamet KURT</p>
+                <p class="text-capitalize rank">Freelance Web Developer</p>
+                <ul class="menu">
+                    <li><a href="" class="active"><i class="la la-briefcase"></i> <span>Your Works</span></a></li>
+                    <li><a href=""><i class="la la-user"></i> <span>Your Customers</span></a></li>
+                    <li><a href=""><i class="la la-television"></i> <span>Your Tranings</span></a></li>
+                    <li><a href=""><i class="la la-building"></i> <span>Your Company</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-8 main">
+                <div class="searchBox">
+                    <i class="la la-search"></i>
+                    <input type="text" class="shadow-sm" name="search" id="searchBox" placeholder="Search on works">
+                </div>
+            </div>
+            <div class="col-md-2 chat shadow">
+                <ul>
+                    <li>
+                        <img src="img/avatar2.jpg">
+                        <div class="name">Selahattin Engin</div>
+                        <div class="message">Hello World</div>
+                    </li>
+                </ul>
+                <div class="chatInput">
+                    <input type="text" class="shadow" name="chatInput" id="chatInput" placeholder="Text to here">
+                    <button><i class="la la-paper-plane-o"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(".tooltip").tooltip();
+    </script>
+</body>
+
+</html>

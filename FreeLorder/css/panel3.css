@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+
+html,body{height: 100%;}
+*:not(i){font-family: 'Karla';-webkit-font-smoothing: antialiased}
+
+#logo{filter: drop-shadow(0 1px 2px black);}
+.menu-item{border-radius: 0 0 5px 5px;display: inline-block;color: white;padding: 10px;color: #9095B9;text-shadow: 0 1px 1px #000000a8;font-weight: bold;text-transform: uppercase;font-size: .9em}
+.menu-item:hover{background: linear-gradient(to right top, #384572, #465097);color:#9095B9;box-shadow: 0 1px 1px rgba(0,0,0,.15);text-decoration: none}
+
+.sidebar{background: linear-gradient(to right top, #384572, #465097);text-align: center;color: white}
+.sidebar .menu{display: flex;padding: 0 20px;flex-direction: column;margin-top: 40px}
+.sidebar .menu li{display: flex;flex-grow: 1;margin: 3px 0}
+.sidebar .menu li a{font-weight: bold;font-size: .9em;transition: .3s; text-transform: uppercase;display: flex;flex-grow: 1;justify-content: flex-start;align-items: center;color: #9095B9;text-decoration: none;padding: 15px 10px;position: relative;text-shadow: 0 1px 1px #000000a8;}
+/*.sidebar .menu li a:hover{transform: scale(1.1);}*/
+.sidebar .menu li a::after{background: linear-gradient(to left top, #384572, #465097);position: absolute;top:0;right:0;width: 0;height: 100%;content: '';transition: .3s ease-in-out;}
+.sidebar .menu li a:hover:after, .sidebar .menu li a.active:after{width: 100%;box-shadow: 0 1px 1px rgba(0,0,0,.2)}
+.sidebar .menu li a:hover i, .sidebar .menu li a.active i{text-indent: -20px;}
+.sidebar .menu li a span{margin-left: 30%;z-index: 3;}
+.sidebar .menu li a i{font-size: 1.5em;z-index: 3;text-indent: 0;transition: .3s ease-in-out}
+
+.main{background: linear-gradient(to right top, #333C69, #384177)}
+.main input#searchBox{width:50%;border: 0;background: none;padding: 5px 45px;transition: .3s;color: white}
+.main input#searchBox::placeholder{color: #747AA2}
+.main input#searchBox:focus{outline: none;background: #404B87;width:100%;border-radius: 20px;box-shadow: 0 1px 1px rgba(0,0,0,.15);}
+.main .searchBox{position: relative;margin: 10px;width: 100%;}
+.main .searchBox i.la-search{position: absolute;left:10px;font-size: 1.3em;color:#747AA2;line-height: 35px}
+
+.main .profile{text-align: right;line-height: 35px;}
+.main .profile a[href="#fullMenu"]{margin-right: 10px;float: left}
+.main .profile .balance{display: inline-block;color: #afb2ca;text-shadow: 0 1px 1px #000000a8;margin-right: 15px;font-weight: bold;font-size: .9em;background: linear-gradient(to right top, #384572, #465097);border-radius: 15px;width: 140px;position: absolute;right: 0;text-align: left;top: 8.5px;padding: 0 10px;}
+.main .profile .balance i{margin-right: 5px}
+.main .profile .profilePhoto{margin: 5px;display: inline-block;}
+.main .profile .profilePhoto img{width: 40px;height: 40px;border-radius: 50%;cursor: pointer;}
+.main .profile .profilePhoto .dropdown-menu{margin-top: 10px;text-align: center}
+.main .profile .profilePhoto .dropdown-item.active, .main .profile .profilePhoto .dropdown-item:active{background: #404B87;border-radius: 0;}
